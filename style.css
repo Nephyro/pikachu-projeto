@@ -93,6 +93,46 @@ footer{
 }
 
 
+
+header span {
+    cursor:default;
+    transform: translateX(-100%);
+    top: 50%;
+    left: 50%;
+    transform: translate(5%, 1%);
+}
+
+header span::before,
+header span::after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    background: #FFFFFF;
+    width: 0;
+    transition: width 0.7s ease;
+}
+
+header span::before {
+    top: 0;
+    left: 0;
+}
+
+header span::after {
+    bottom: 0;
+    right: 0;
+}
+
+header span:hover::before,
+header span:active::before {
+    width: 100%;
+}   
+
+header span:hover::after,
+header span:active::after {
+    width: 100%;
+}
+
+
 /*  TABLET  */
 @media (max-width: 768px) {
     body {
